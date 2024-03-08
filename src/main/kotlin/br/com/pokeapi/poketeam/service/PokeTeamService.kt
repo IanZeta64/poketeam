@@ -1,12 +1,13 @@
 package br.com.pokeapi.poketeam.service
 
-import br.com.pokeapi.poketeam.entity.PokeTeam
+import br.com.pokeapi.poketeam.dto.TeamDTORequest
+import br.com.pokeapi.poketeam.dto.TeamDTOResponse
 import java.util.UUID
 
 interface PokeTeamService {
-  fun create(team: PokeTeam): PokeTeam
-  fun getAll(): List<PokeTeam>
-  fun getById(teamId: UUID): PokeTeam
-  fun update(team: PokeTeam, teamId: UUID): PokeTeam
+  fun create(request: TeamDTORequest): TeamDTOResponse
+  fun getAll(): List<TeamDTOResponse>
+  fun getById(teamId: UUID): TeamDTOResponse
+  fun update(request: TeamDTORequest, teamId: UUID): TeamDTOResponse
   fun delete(teamId: UUID)
 }
