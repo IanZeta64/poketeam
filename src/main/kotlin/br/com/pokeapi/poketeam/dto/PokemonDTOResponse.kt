@@ -5,15 +5,16 @@ import br.com.pokeapi.poketeam.entity.Move
 import java.util.*
 
 data class PokemonDTOResponse(
-  val id: UUID? = null,
+  val id: UUID?,
   val dexNumber: Int,
   val name: String,
   val level: Int,
-  val ability: Ability? = null,
-  val primaryType: String? = null,
-  val secondaryType: String? = null,
-  val moves: List<Move>? = null,
-  val nature: String
+  val ability: Ability?,
+  val primaryType: String?,
+  val secondaryType: String?,
+  val moves: List<Move>?,
+  val nature: String,
+  val pokeSpriteUrl: String?
 ) {
 
 }

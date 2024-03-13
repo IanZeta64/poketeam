@@ -8,6 +8,7 @@ data class PokemonDTORequest(
   val primaryType: String,
   val secondaryType: String?= null,
   val moves: List<String>,
-  val nature: String
+  val nature: String,
+  val pokeSpriteUrl: String
 ) {
 }

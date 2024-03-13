@@ -7,7 +7,7 @@ import java.util.UUID
 @Entity
 @Table(name = "team")
 data class Team(@Id @GeneratedValue(strategy = GenerationType.UUID)
-                val id: UUID? = null,
+                val id: UUID?,
                 val trainer: String,
                 val sex: String,
                 val region: String,
@@ -15,7 +15,7 @@ data class Team(@Id @GeneratedValue(strategy = GenerationType.UUID)
                 val pokemonList: List<Pokemon>,
                 val trainerSpriteUrl: String,
                 val createdOn: Instant,
-                var modifiedOn: Instant? = null) {
+                var modifiedOn: Instant?) {
   constructor( trainer: String,
                sex: String,
                region: String,

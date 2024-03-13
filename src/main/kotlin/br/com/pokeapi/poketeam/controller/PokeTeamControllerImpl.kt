@@ -3,14 +3,12 @@ package br.com.pokeapi.poketeam.controller
 import br.com.pokeapi.poketeam.dto.TeamDTORequest
 import br.com.pokeapi.poketeam.dto.TeamDTOResponse
 import br.com.pokeapi.poketeam.service.PokeTeamService
-import lombok.RequiredArgsConstructor
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
 import java.net.URI
 import java.util.*
 
 @RestController
-@RequiredArgsConstructor
 class PokeTeamControllerImpl(val service: PokeTeamService): PokeTeamController {
   override fun getAll(): ResponseEntity<List<TeamDTOResponse>> {
    return ResponseEntity.ok(service.getAll())
@@ -36,6 +34,6 @@ class PokeTeamControllerImpl(val service: PokeTeamService): PokeTeamController {
 
   override fun delete(teamId: UUID): ResponseEntity<Unit> {
     service.delete(teamId)
-    return ResponseEntity.noContent().build();
+    return ResponseEntity.noContent().build()
   }
 }

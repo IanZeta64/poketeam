@@ -8,18 +8,18 @@ import java.util.*
 
 @Entity
 @Table(name="move")
-data class Move(@Id @GeneratedValue(strategy = GenerationType.UUID)
-                @JsonIgnore
-                val id: UUID? = null,
+data class Move(@Id
                 val name: String,
                 @Enumerated(EnumType.STRING)
-                val type: Type? = null,
+                val type: Type?,
                 @Enumerated(EnumType.STRING)
-                val effect: Effect? = null,
-                val damage: Int? = null,
-                val pp: Int? = null,
-                val priority: Boolean? = null,
-                val description: String? = null) {
-  constructor(name: String): this( null, name, null, null, null, null, null, null)
+                val effect: Effect?,
+                val damage: Int?,
+                val pp: Int?,
+                val accuracy: Int?,
+                val priority: Int?,
+                @Column(length = 2000)
+                val description: String?) {
+  constructor(name: String): this(name, null, null, null, null, null, null, null)
 
 }

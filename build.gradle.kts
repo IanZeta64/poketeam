@@ -32,12 +32,18 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	compileOnly("org.projectlombok:lombok")
+  implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
+
+  implementation("org.springframework.kafka:spring-kafka")
+
+  compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+  testImplementation("org.springframework.kafka:spring-kafka-test")
+
 }
 
 tasks.withType<KotlinCompile> {

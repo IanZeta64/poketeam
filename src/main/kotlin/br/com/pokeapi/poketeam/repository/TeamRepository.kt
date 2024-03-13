@@ -1,10 +1,10 @@
 package br.com.pokeapi.poketeam.repository
 
-import br.com.pokeapi.poketeam.entity.Pokemon
+import br.com.pokeapi.poketeam.entity.Team
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
-import java.util.UUID
+import java.util.*
 
 @Repository
-interface PokeBattleRepository: JpaRepository<Pokemon, UUID> {
+interface TeamRepository: JpaRepository<Team, UUID> {
 }
